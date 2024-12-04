@@ -25,7 +25,7 @@ def get_historical_data(ticker):
     return Ticker.get_historical_data(ticker)
 
 # Ignore the Streamlit warning for using st.pyplot()
-st.set_option('deprecation.showPyplotGlobalUse', False)
+# st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Main title
 st.title('Option pricing')
