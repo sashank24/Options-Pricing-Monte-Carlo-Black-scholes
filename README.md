@@ -4,7 +4,6 @@ Welcome to the **Option Pricing Models** repository! This project is a simple ye
 
 - 🧮 **Black-Scholes Model**  
 - 🎲 **Monte Carlo Simulation**  
-- 🌐 **Binomial Tree Model**
 
 Each model is interactive, customizable, and visualized through an intuitive **Streamlit web interface**. The app fetches live stock price data from Yahoo Finance, processes it, and calculates the **call** and **put** option prices based on user inputs.
 
@@ -16,7 +15,6 @@ Each model is interactive, customizable, and visualized through an intuitive **S
    Calculate option prices using these three approaches:
    - **Black-Scholes Model**: Analytically calculates prices using a closed-form formula.
    - **Monte Carlo Simulation**: Generates thousands of random price paths to compute average payoffs.
-   - **Binomial Tree Model**: Constructs a step-by-step tree of potential stock prices and calculates backward.
 
 2. **Customizable Parameters**  
    Users can input parameters such as:
