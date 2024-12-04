@@ -1,50 +1,46 @@
-# 🎯 Option Pricing Models: A Web App for European Option Pricing
+# Option Pricing Web Application 📊
 
-Welcome to the **Option Pricing Models** repository! This project is a simple yet powerful web app for calculating **European option prices** using three popular financial models:
+A simple and intuitive **web application** for calculating **European Option Prices** using two powerful models:
+- **Black-Scholes Model**
+- **Monte Carlo Simulation**
 
-- 🧮 **Black-Scholes Model**  
-- 🎲 **Monte Carlo Simulation**  
-
-Each model is interactive, customizable, and visualized through an intuitive **Streamlit web interface**. The app fetches live stock price data from Yahoo Finance, processes it, and calculates the **call** and **put** option prices based on user inputs.
-
----
-
-## 🔧 Features
-
-1. **Option Pricing Models**  
-   Calculate option prices using these three approaches:
-   - **Black-Scholes Model**: Analytically calculates prices using a closed-form formula.
-   - **Monte Carlo Simulation**: Generates thousands of random price paths to compute average payoffs.
-
-2. **Customizable Parameters**  
-   Users can input parameters such as:
-   - **Ticker**: Stock ticker symbol (e.g., `AAPL`).
-   - **Strike Price**: The exercise price of the option.
-   - **Expiry Date**: The date on which the option matures.
-   - **Risk-Free Rate**: The interest rate for risk-free investments.
-   - **Volatility**: The standard deviation of the stock's returns.
-
-3. **Live Data Fetching**  
-   - Fetches the latest spot price for any stock using **Yahoo Finance**.
-   - Data caching is implemented using `requests-cache` to optimize repeated requests.
-
-4. **Interactive Web App**  
-   - A clean and modern interface built with **Streamlit**.
-   - Visualizes the results with real-time stock charts and simulated price paths.
+The app fetches **real-time stock data** from Yahoo Finance to make accurate predictions and provides an interactive user interface built using **Streamlit**.
 
 ---
 
-## 🚀 Live Demo
+## 🔑 Key Features
+1. **Option Pricing Models**:
+   - **Black-Scholes Model**: A closed-form solution for European options based on analytical formulas.
+   - **Monte Carlo Simulation**: A probabilistic model simulating thousands of possible outcomes to estimate option prices.
+   
+2. **Real-Time Data Integration**:
+   - Fetches historical stock prices from **Yahoo Finance** (e.g., Open, High, Low, Close) using the `yfinance` library.
 
-### Black-Scholes Model:
-![Black-Scholes Model Demo](demo/black_scholes_demo.gif)
+3. **Interactive User Interface**:
+   - Built with **Streamlit** for an engaging, user-friendly experience.
+   - Dynamic input fields and visualizations for easy parameter tuning and decision-making.
 
-### Monte Carlo Simulation:
-![Monte Carlo Simulation Demo](demo/monte_carlo_demo.gif)
+4. **Custom Visualizations**:
+   - Plots historical stock prices.
+   - Displays simulated stock price movements for Monte Carlo models.
+
+5. **Performance Optimization**:
+   - Caches data using Streamlit to minimize redundant API calls and improve efficiency.
 
 ---
 
-## 🗂 Project Structure
+## 📂 Project Structure
 
-Here's how the repository is organized:
-
+```plaintext
+option-pricing-models/
+├── option_pricing/
+│   ├── __init__.py              # Package initializer
+│   ├── base.py                  # Abstract base class for option pricing models
+│   ├── BlackScholesModel.py     # Black-Scholes implementation
+│   ├── MonteCarloSimulation.py  # Monte Carlo Simulation implementation
+│   ├── ticker.py                # Fetch and manage Yahoo Finance data
+├── streamlit_app.py             # Streamlit web application
+├── option_pricing_test.py       # Testing script for models and data
+├── Requirements.txt             # Python dependencies
+├── Dockerfile                   # Docker configuration for containerized deployment
+├── README.md                    # Project documentation
